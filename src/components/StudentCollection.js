@@ -14,7 +14,8 @@ const StudentCollection = (props) => {
   const studentComponents = props.people.map((student, i) => {
     return (
       <li key={i}>
-        <Student fullName={student.fullName} email={student.email} />
+        <Student person={student} />
+        {/* <Student fullName={student.fullName} email={student.email} /> */}
       </li>
     );
   });

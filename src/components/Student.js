@@ -4,8 +4,8 @@ const Student = (props) => {
   // component functions always return JSX
   return (
     <section>
-      <h3>{props.fullName}</h3>
-      <p>{props.email}</p>
+      <h3>{props.person.fullName}</h3>
+      <p>{props.person.email}</p>
     </section>
   );
 };
