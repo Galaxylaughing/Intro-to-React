@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Student = () => {
+const Student = (props) => {
   // component functions always return JSX
   return (
-    <h3>Student Component</h3>
+    <h3>{props.fullName}, {props.email}</h3>
   );
 };
 
