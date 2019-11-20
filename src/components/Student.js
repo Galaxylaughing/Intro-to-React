@@ -3,7 +3,10 @@ import React from 'react';
 const Student = (props) => {
   // component functions always return JSX
   return (
-    <h3>{props.fullName}, {props.email}</h3>
+    <section>
+      <h3>{props.fullName}</h3>
+      <p>{props.email}</p>
+    </section>
   );
 };
 
