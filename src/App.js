@@ -2,6 +2,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+const name = 'Sabrina';
+
 function App() {
   return (
     <div className="App">
@@ -16,8 +18,11 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Learn React!
         </a>
+        
+        <p>{name}'s kitten:</p>
+        <img src="http://placekitten.com/400/300" alt="kitten" />
       </header>
     </div>
   );
