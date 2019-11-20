@@ -10,6 +10,7 @@ const StudentCollection = () => {
     { fullName: "Dee",        email: "dee@dee.dee" }
   ];
 
+  // turn array of student object into an array of JSX list items
   const studentComponents = students.map((student, i) => {
     return (
       <li key={i}>
@@ -18,6 +19,7 @@ const StudentCollection = () => {
     );
   });
 
+  // return all JSX list items in an unordered list
   return (
     <ul className="student-collection">
       {studentComponents}
