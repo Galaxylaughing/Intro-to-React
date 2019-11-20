@@ -5,12 +5,19 @@ import StudentCollection from './components/StudentCollection';
 import ComponentA from './components/ComponentA';
 
 const name = 'Sabrina';
+const students = [
+  { fullName: "Ada",        email: "ada@lovelace.com" },
+  { fullName: "Katherine",  email: "kat@nasa.gov" },
+  { fullName: "Devin",      email: "dmoney@g.mail" },
+  { fullName: "Becca",      email: "bmoney@g.mail" },
+  { fullName: "Dee",        email: "dee@dee.dee" }
+];
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <StudentCollection />
+        <StudentCollection people={students} />
         <ComponentA ComponentB />
         <img src={logo} className="App-logo" alt="logo" />
         <p>
