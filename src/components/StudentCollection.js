@@ -1,9 +1,9 @@
 import React from 'react';
-import Student from './Student.js';
+import Student from './Student';
 
 const StudentCollection = () => {
   const students = [
-    { fullName: "Ada",        email: "ada-lovelace@ada.com" },
+    { fullName: "Ada",        email: "ada@lovelace.com" },
     { fullName: "Katherine",  email: "kat@nasa.gov" },
     { fullName: "Devin",      email: "dmoney@g.mail" },
     { fullName: "Becca",      email: "bmoney@g.mail" },

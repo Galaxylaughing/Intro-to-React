@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import StudentCollection from './components/StudentCollection';
-import Student from './components/Student';
 import ComponentA from './components/ComponentA';
 
 const name = 'Sabrina';

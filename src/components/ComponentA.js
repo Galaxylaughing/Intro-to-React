@@ -1,6 +1,6 @@
 // components/ComponentA.js
 import React from 'react';
-import ComponentB from './ComponentB.js';
+import ComponentB from './ComponentB';
 
 const ComponentA = () => {
     return (
