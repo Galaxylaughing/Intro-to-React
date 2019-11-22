@@ -10,7 +10,8 @@ const students = [
   { fullName: "Katherine",  email: "kat@nasa.gov",      class: "Branches",  present: false },
   { fullName: "Devin",      email: "dmoney@g.mail",     class: "Leaves",    present: true },
   { fullName: "Becca",      email: "bmoney@g.mail",     class: "Leaves",    present: true },
-  { fullName: "Dee",        email: "dee@dee.dee",       class: "Branches",  present: true }
+  { fullName: "Dee",        email: "dee@dee.dee",       class: "Branches",  present: true },
+  { fullName: "Tonks",                                                      present: true }
 ];
 
 function App() {

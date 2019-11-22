@@ -13,3 +13,7 @@
 .absent {
   color: red;
 }
+
+.no-class {
+  background-color: lightgray;
+}
