@@ -6,11 +6,11 @@ import ComponentA from './components/ComponentA';
 
 const name = 'Sabrina';
 const students = [
-  { fullName: "Ada",        email: "ada@lovelace.com" },
-  { fullName: "Katherine",  email: "kat@nasa.gov" },
-  { fullName: "Devin",      email: "dmoney@g.mail" },
-  { fullName: "Becca",      email: "bmoney@g.mail" },
-  { fullName: "Dee",        email: "dee@dee.dee" }
+  { fullName: "Ada",        email: "ada@lovelace.com",  class: "Leaves",    present: false },
+  { fullName: "Katherine",  email: "kat@nasa.gov",      class: "Branches",  present: false },
+  { fullName: "Devin",      email: "dmoney@g.mail",     class: "Leaves",    present: true },
+  { fullName: "Becca",      email: "bmoney@g.mail",     class: "Leaves",    present: true },
+  { fullName: "Dee",        email: "dee@dee.dee",       class: "Branches",  present: true }
 ];
 
 function App() {

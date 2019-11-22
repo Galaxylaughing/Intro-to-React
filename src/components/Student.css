@@ -1,0 +1,15 @@
+.leaves {
+  background-color: lightgreen;
+}
+
+.branches {
+  background-color: burlywood;
+}
+
+.present {
+  color: green;
+}
+
+.absent {
+  color: red;
+}
