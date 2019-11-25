@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import StudentCollection from './components/StudentCollection';
 import ComponentA from './components/ComponentA';
+import NameDisplay from './components/NameDisplay';
 
 // const name = 'Sabrina';
 // const students = [
@@ -56,6 +57,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+          <NameDisplay name="Ada"/>
+          
           <StudentCollection people={ this.students } />
           <ComponentA ComponentB />
           <img src={ logo } className="App-logo" alt="logo" />

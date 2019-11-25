@@ -1,5 +1,6 @@
 // NameDisplay.js
 import React from 'react';
+import { thisExpression } from '@babel/types';
 
 class NameDisplay extends React.Component {
   constructor() {
@@ -11,6 +12,22 @@ class NameDisplay extends React.Component {
     };
   }
 
+  changeDisplayName() {
+    if ( this.state.displayName === false ) {
+      this.setState( { displayName: true } );
+    } else {
+      return;
+    }
+  }
+
+  onButtonClick = () => {
+    this.setState( { displayName: !this.state.displayName } );
+  }
+
+  onNameChange = ( event ) => {
+    this.setState( { name: event.target.value } );
+  }
+
   render() {
     let display = 'Sorry, I don\'t know your name.';
     // access state with `this.state`
@@ -19,7 +36,9 @@ class NameDisplay extends React.Component {
     }
     return (
       <section>
+        <div><button onClick={ this.onButtonClick }>Toggle Display</button></div>
         { display }
+        <div>Change your name: <input onChange={ this.onNameChange }></input></div>
       </section>
     );
   }

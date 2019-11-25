@@ -22,9 +22,12 @@ import PropTypes from 'prop-types';
 // };
 
 class Student extends React.Component {
-  // constructor(props) {
-  //   super(props); // creates this.props = props
-  // }
+  constructor(props) {
+    super(props); // creates this.props = props
+    this.state = {
+      present: this.props.present,
+    }
+  }
 
   buildStyles() {
     const selectStyles = ((this.props.class) ? this.props.class.toLowerCase() : '')
