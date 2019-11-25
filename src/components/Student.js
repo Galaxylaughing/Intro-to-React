@@ -2,23 +2,46 @@ import React from 'react';
 import './Student.css';
 import PropTypes from 'prop-types';
 
-const Student = (props) => {
+// const Student = (props) => {
 
-  const buildStyles = () => {
-    const selectStyles = ((props.class) ? props.class.toLowerCase() : '')
+//   const buildStyles = () => {
+//     const selectStyles = ((props.class) ? props.class.toLowerCase() : '')
+//       + ' '
+//       + ((props.present) ? 'present' : 'absent');
+
+//     return selectStyles;
+//   }
+
+//   // component functions always return JSX
+//   return (
+//     <section className={buildStyles()}>
+//       <h3>{props.fullName}</h3>
+//       <p>{props.email}</p>
+//     </section>
+//   );
+// };
+
+class Student extends React.Component {
+  // constructor(props) {
+  //   super(props); // creates this.props = props
+  // }
+
+  buildStyles() {
+    const selectStyles = ((this.props.class) ? this.props.class.toLowerCase() : '')
       + ' '
-      + ((props.present) ? 'present' : 'absent');
+      + ((this.props.present) ? 'present' : 'absent');
 
     return selectStyles;
   }
 
-  // component functions always return JSX
-  return (
-    <section className={buildStyles()}>
-      <h3>{props.fullName}</h3>
-      <p>{props.email}</p>
-    </section>
-  );
+  render() {
+    return (
+      <section className={this.buildStyles()}>
+        <h3>{this.props.fullName}</h3>
+        <p>{this.props.email}</p>
+      </section>
+    );
+  }
 };
 
 Student.propTypes = {

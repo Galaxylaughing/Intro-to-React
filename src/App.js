@@ -40,8 +40,8 @@ import ComponentA from './components/ComponentA';
 // }
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor (props) {
+    super(props); // creates `this.props = props`
     this.name = 'Sabrina';
     this.students = [
       { fullName: "Ada",        email: "ada@lovelace.com",  class: "Leaves",    present: false },
@@ -52,13 +52,13 @@ class App extends React.Component {
       { fullName: "Tonks",                                                      present: true },
     ];
   }
-  render() {
+  render () {
     return (
       <div className="App">
         <header className="App-header">
-          <StudentCollection people={this.students} />
+          <StudentCollection people={ this.students } />
           <ComponentA ComponentB />
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={ logo } className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -70,8 +70,10 @@ class App extends React.Component {
           >
             Learn React!
           </a>
-    
-          <p>{this.name}'s kitten:</p>
+
+          <p>
+            { this.name }'s kitten:
+          </p>
           <img src="http://placekitten.com/400/300" alt="kitten" />
         </header>
       </div>
