@@ -50,7 +50,7 @@ class App extends React.Component {
       { fullName: "Devin",      email: "dmoney@g.mail",     class: "Leaves",    present: true },
       { fullName: "Becca",      email: "bmoney@g.mail",     class: "Leaves",    present: true },
       { fullName: "Dee",        email: "dee@dee.dee",       class: "Branches",  present: true },
-      { fullName: "Tonks",                                                      present: true },
+      { fullName: "Tonks",      email: "tonks@bogus.bogus",                     present: true },
     ];
   }
   render () {

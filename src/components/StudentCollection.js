@@ -61,6 +61,21 @@ class StudentCollection extends React.Component {
     }
   }
 
+  togglePresent = (studentEmail) => {
+    console.log('Toggling', studentEmail);
+
+    // get everything that's saved in the key 'students'
+    // and put it into the variable 'students'
+    const { students } = this.state;
+
+    // find student
+    const studentToUpdate = students.find((student) => student.email === studentEmail);
+    // change student data
+    studentToUpdate.present = !studentToUpdate.present;
+    // update state and re-render 
+    this.setState( { students: students } );
+  }
+
   // turn array of student object into an array of JSX list items
   buildComponents () {
     return this.state.students.map( ( student, i ) => {
@@ -71,6 +86,7 @@ class StudentCollection extends React.Component {
           class={ student.class } 
           present={ student.present } 
           key={ i }
+          togglePresentCallback={ this.togglePresent }
         />
       );
     });
@@ -89,7 +105,7 @@ class StudentCollection extends React.Component {
 StudentCollection.propTypes = {
   people: PropType.arrayOf(PropType.shape({
     fullName: PropType.string.isRequired,
-    email: PropType.string,
+    email: PropType.string.isRequired,
     class: PropType.string,
     present: PropType.bool,
   })).isRequired
