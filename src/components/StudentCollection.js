@@ -62,8 +62,6 @@ class StudentCollection extends React.Component {
   }
 
   togglePresent = (studentEmail) => {
-    console.log('Toggling', studentEmail);
-
     // get everything that's saved in the key 'students'
     // and put it into the variable 'students'
     const { students } = this.state;
@@ -74,6 +72,12 @@ class StudentCollection extends React.Component {
     studentToUpdate.present = !studentToUpdate.present;
     // update state and re-render 
     this.setState( { students: students } );
+  }
+
+  deleteStudent = (studentEmail) => {
+    const { students } = this.state;
+    const filteredStudents = students.filter(student => student.email !== studentEmail);
+    this.setState( { students: filteredStudents } );
   }
 
   // turn array of student object into an array of JSX list items
@@ -87,6 +91,7 @@ class StudentCollection extends React.Component {
           present={ student.present } 
           key={ i }
           togglePresentCallback={ this.togglePresent }
+          deleteStudentCallback={ this.deleteStudent }
         />
       );
     });

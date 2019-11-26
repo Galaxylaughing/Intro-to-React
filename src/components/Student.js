@@ -78,6 +78,10 @@ const Student = (props) => {
     props.togglePresentCallback(props.email);
   }
 
+  const onDeleteStudentClick = () => {
+    props.deleteStudentCallback(props.email);
+  }
+
   return (
     <section className={buildStyles()}>
       <h3>{props.fullName}</h3>
@@ -85,6 +89,9 @@ const Student = (props) => {
       {/* <button onClick={ () => { props.togglePresent(props.email) } }> */}
       <button onClick={ onTogglePresentClick }>
         Mark { (props.present) ? 'Absent' : 'Present' }
+      </button>
+      <button onClick={ onDeleteStudentClick }>
+        Delete { props.fullName }
       </button>
     </section>
   );
@@ -95,7 +102,8 @@ Student.propTypes = {
   class: PropTypes.string,
   email: PropTypes.string.isRequired,
   present: PropTypes.bool.isRequired,
-  togglePresentCallback: PropTypes.func.isRequired
+  togglePresentCallback: PropTypes.func.isRequired,
+  deleteStudentCallback: PropTypes.func.isRequired,
 };
 
 // // You can also set default values for some or all of your props with a defaultProps static attribute:
