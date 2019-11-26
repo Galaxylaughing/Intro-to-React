@@ -70,7 +70,7 @@ const Student = (props) => {
     const selectStyles = ((props.class) ? props.class.toLowerCase() : '')
       + ' '
       + ((props.present) ? 'present' : 'absent');
-      
+
     return selectStyles;
   }
 
@@ -78,6 +78,9 @@ const Student = (props) => {
     <section className={buildStyles()}>
       <h3>{props.fullName}</h3>
       <p>{props.email}</p>
+      <button>
+        Mark { (props.present) ? 'Absent' : 'Present' }
+      </button>
     </section>
   );
 };
