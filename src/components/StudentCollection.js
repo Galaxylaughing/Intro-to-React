@@ -65,14 +65,13 @@ class StudentCollection extends React.Component {
   buildComponents () {
     return this.state.students.map( ( student, i ) => {
       return (
-        <li key={ i }>
-          <Student 
-            fullName={ student.fullName } 
-            email={ student.email } 
-            class={ student.class } 
-            present={ student.present } 
-          />
-        </li>
+        <Student 
+          fullName={ student.fullName } 
+          email={ student.email } 
+          class={ student.class } 
+          present={ student.present } 
+          key={ i }
+        />
       );
     });
   }
@@ -80,9 +79,9 @@ class StudentCollection extends React.Component {
   // return all JSX list items in an unordered list
   render () {
     return (
-      <ul className="student-collection">
+      <div className="student-collection">
         { this.buildComponents() }
-      </ul>
+      </div>
     );
   }
 };
