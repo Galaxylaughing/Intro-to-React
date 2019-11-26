@@ -1,6 +1,5 @@
 // NameDisplay.js
 import React from 'react';
-import { thisExpression } from '@babel/types';
 
 class NameDisplay extends React.Component {
   constructor() {
